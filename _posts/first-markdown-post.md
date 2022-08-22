@@ -32,5 +32,6 @@ Tanisha's Favorite Foods:
 
 
 The Rocky Mountains are beautiful! 
-![I want to go here some day!](/images/rocky-mountains.jpg "Rocky Mountains")
+![rocky-mountains]([/images/rocky-mountains.jpg "Rocky Mountains"](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Moraine_Lake_17092005.jpg/1200px-Moraine_Lake_17092005.jpg))
+
 I want to go here some day.:blush:
