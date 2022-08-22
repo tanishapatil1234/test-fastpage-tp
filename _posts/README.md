@@ -1,17 +1,29 @@
-⚠️ Do not delete this directory!  You can delete the blog post files in this directory, but you should still keep this directory around as Jekyll expects this folder to exist.
+# Tanisha's Markdown Post
+## *This is my markdown post :+1:*
+:memo: **Note:** This is my first time making a markdown post.
 
-# Auto-convert markdown files To Posts
+<ins>**Table**</ins>
 
-[`fastpages`](https://github.com/fastai/fastpages) will automatically convert markdown files saved into this directory as blog posts!
+| This | is   |
+|------|------|
+|   a  | table|
 
-You must save your notebook with the naming convention `YYYY-MM-DD-*.md`.  Examples of valid filenames are:
+<ins>**List**</ins>
 
-```shell
-2020-01-28-My-First-Post.md
-2012-09-12-how-to-write-a-blog.md
-```
 
-# Resources
+Tanisha's Favorite Foods: 
 
-- [Jekyll posts](https://jekyllrb.com/docs/posts/)
-- [Example markdown post](https://github.com/fastai/fastpages/blob/master/_posts/2020-01-14-test-markdown-post.md)
+* Pizza 🍕
+
+* Pasta 🥘
+
+* Ice Cream 🍨
+
+* Cupcakes 🧁
+
+<ins>**Image**</ins>
+
+
+The Rocky Mountains are beautiful! 
+![I want to go here some day!](/images/rocky-mountains.jpg "Rocky Mountains")
+I want to go here some day.:blush:
