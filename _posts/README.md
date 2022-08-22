@@ -1,4 +1,11 @@
-# Tanisha's Markdown Post
+---
+toc: true
+layout: post
+description: My first markdown post.
+categories: [markdown]
+title: Tanisha's First Markdown Post
+---
+# Tanisha's First Markdown Post
 ## *This is my markdown post :+1:*
 :memo: **Note:** This is my first time making a markdown post.
 
