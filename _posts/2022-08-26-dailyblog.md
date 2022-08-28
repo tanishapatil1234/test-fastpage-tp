@@ -4,6 +4,7 @@ comments: true
 layout: post
 title: Tanisha's Daily Blog
 description: An account of my day
+show_images: true
 image: /image/me_claire_mort.png
 ---
 # Thursday, August 25th
