@@ -33,4 +33,4 @@ description: An account of my day
 - :bulb: Main Idea : The definition of art has changed throughout the centuries. Art must convey an emotion. feeling, or idea
 - :memo: HW : finish cornell notes on "Culture and Values", prepare for class discussion and presentation on POE and D <br>
 **Field Hockey Practice:**
-- :runner: Practice from 4-6 pm
+- :runner: Field Hockey Practice from 4-6 pm
