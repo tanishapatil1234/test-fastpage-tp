@@ -5,7 +5,7 @@ layout: post
 title: Tanisha's Daily Blog
 description: An account of my day
 show_images: true
-image: /images/me_claire_mort.png
+image: /images/me_claire_mort.jpg
 ---
 # Thursday, August 25th
 **Period 1 Intro to Engineering Design:**
