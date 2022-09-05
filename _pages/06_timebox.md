@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Progress
-permalink: /progress/
+title: Time Box
+permalink: /Time Box/
 ---
 
 | Week # | Title | Learning |
 | --- | --- | --- |
-| Week #0 | Tools Setup | Learned to create personal fastpages, created markdown post, created jupyter notebook post, and learned to use VSCODE. |
-| Week #1 | Intro Python, Jupyter, Fastpages | Made a quiz using python, customized front page, created a productive blog, Bash tools check. |
-| Week #2 | Data Abstraction | Temporarily changed remote theme, changed to pink mode, created and edited new pages, using python to make a quiz that stores lists, and coding a python for loop. |
+| Week #0 | Tools Setup | Created personal fastpage, made first markdown post, learned to use vscode, and used jupyter notebook to run python |
+| Week #1 | Intro Python, Jupyter, Fastpages | Created a quiz with python, added images to personalize front page, md daily blog post, bash tool check |
+| Week #2 | Data Abstraction | Change remote theme temporarily and blog findings, created this page and table, use python find and print certain part of database based on user input (dictionaries) |
