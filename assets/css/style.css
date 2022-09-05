@@ -539,7 +539,7 @@ p code { font-size: 19px; }
 
 html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #d2adf5 !important; }
 
-a { color: #4bbaff !important; }
+a { color: white !important; }
 
 a:hover { color: rgba(255, 255, 255, 0.87) !important; }
 
