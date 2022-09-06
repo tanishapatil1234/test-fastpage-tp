@@ -6,6 +6,7 @@ title: Remote Theme Change
 description: Observations from a temporary change in remote theme
 show_images: true
 image: /images/themechange_front.png
+categories: [markdown, week2]
 ---
 # Remote Theme Change Observations 
 I temporarily changed the theme to the 'modernist' theme
