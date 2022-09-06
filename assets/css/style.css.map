@@ -3,8 +3,8 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../../tmp/jekyll-remote-theme-20220905-1-194ltbe/_sass/jekyll-theme-modernist.scss",
-		"../../tmp/jekyll-remote-theme-20220905-1-194ltbe/_sass/rouge-base16-dark.scss"
+		"../../tmp/jekyll-remote-theme-20220905-1-zxf10t/_sass/jekyll-theme-modernist.scss",
+		"../../tmp/jekyll-remote-theme-20220905-1-zxf10t/_sass/rouge-base16-dark.scss"
 	],
 	"sourcesContent": [
 		"@import \"jekyll-theme-modernist\";\n",
