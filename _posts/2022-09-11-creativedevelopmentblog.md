@@ -5,6 +5,7 @@ layout: post
 title: Creative Development Blog
 description: AppLab Planning/Blogging. A plan and notes of the steps taken during the process.
 tags: [creative_development]
+image: /images/texting.png
 ---
 # Creative Development Blog
 ## AppLab Creations
