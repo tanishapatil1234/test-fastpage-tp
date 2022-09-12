@@ -4,19 +4,18 @@ comments: true
 layout: post
 title: Creative Development Blog
 description: AppLab Planning/Blogging. A plan and notes of the steps taken during the process.
-image: /images/.png
 tags: [creative_development]
 ---
 # Creative Development Blog
 ## AppLab Creations
-[AppLab Creation](https://studio.code.org/projects/applab/GNqP9uqVldcpC2TuXJe3ODTIQCi8o-hUPEj9pb4qwHY)
-[Personality Quiz](https://studio.code.org/projects/applab/uq_3a5cbrbF5wLUIUBATLDYPnfTIJETCG-L6hTMwqWU)
+- [AppLab Creation](https://studio.code.org/projects/applab/GNqP9uqVldcpC2TuXJe3ODTIQCi8o-hUPEj9pb4qwHY)
+- [Personality Quiz](https://studio.code.org/projects/applab/uq_3a5cbrbF5wLUIUBATLDYPnfTIJETCG-L6hTMwqWU)
 
-**Program Purpose**
+- **Program Purpose**
 This purpose of this program is to test the user's ability to recognize popular luxury brand logos. 
-**Program Functionality**
+- **Program Functionality**
 This program consists of three questions in order to quiz the user on their ability to recognize logos. It starts at the home page and navigates through each question page. If the answer selected is wrong, the program leads the user to an 'incorrect' question that allows the user to either retry the question or get a hint. The last screen desplays the results of the quiz. 
-**Program Testing**
+- **Program Testing**
 I tested this program multiple times. At first I did not use hints and realized that for someone without knowledge of brands, not having hints or retries could be discouraging. Also, the score calculator was not displaying because the if statement was not under an 'on event statement'. After changing this and reassigning score values to each answer I got better results. 
 ## App Planning - Logos Quiz
 - Home page (introduces quiz, leads to q1)
