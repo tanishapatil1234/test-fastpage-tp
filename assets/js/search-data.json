@@ -68,7 +68,7 @@
   
     
         ,"post6": {
-            "title": "Bash Check",
+            "title": "Bash Install Check",
             "content": "%%bash #Check version of Java java_version=$(java -version 2&gt;&amp;1 | sed -n &#39;;s/.* version &quot; (.* ) . (.* ) ..*&quot;.*/ 1 2/p;&#39;) #Check version of Python python_version=`python -c &#39;import sys; version=sys.version_info[:3]; print(&quot;{0}.{1}.{2}&quot;.format(*version))&#39;` #Print using conditional statement if [ $java_version &gt; &quot;0&quot; ]; then echo &quot;Java version: &quot;$java_version else echo &quot;Java not installed&quot; fi if [ $python_version &gt; &quot;0&quot; ]; then echo &quot;Python version: &quot;$python_version else echo &quot;Python not installed&quot; fi . Java version: 110 Python version: 3.9.12 .",
             "url": "https://tanishapatil1234.github.io/test-fastpage-tp/2022/08/27/bash_install_check.html",
             "relUrl": "/2022/08/27/bash_install_check.html",
