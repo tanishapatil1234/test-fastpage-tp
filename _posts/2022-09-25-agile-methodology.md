@@ -33,7 +33,7 @@ tags: [tri1]
 - 12: At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
 
 ## Our Diagram
-![Scrum Diagram](/images/Scrum-Board.png) 
+[Link to Scrum Diagram]([/images/Scrum-Board.png](https://www.canva.com/design/DAFNFFzF8v0/3uu5mHBYF4iV1WFcCDe6cA/view?utm_content=DAFNFFzF8v0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)) 
 
 ## Our Scrum Board
 [Link to our Scrum Board](https://github.com/users/clairehzhao/projects/1/views/1)
