@@ -212,9 +212,20 @@
   
 
   
+      ,"page1": {
+          "title": "Submenu",
+          "content": "Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel . link . HTML fragments and JS data to build a table . link .",
+          "url": "https://tanishapatil1234.github.io/test-fastpage-tp/_pages/07_submenu.html",
+          "relUrl": "/_pages/07_submenu.html",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page2": {
+
+  
+      ,"page3": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/about/",
@@ -248,7 +259,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/robots.txt",
