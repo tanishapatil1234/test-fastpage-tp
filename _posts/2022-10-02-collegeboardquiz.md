@@ -7,3 +7,4 @@ layout: post
 ---
 ### Below is a screen shot of the completed section in college board showing that I completed the quizzes 1.1-1.3
 ![collegeboard_quizresults](/images/collegeboard_quizresults.png)
+![]({{site.baseurl}}/images/collegeboard_quizresults.png)
