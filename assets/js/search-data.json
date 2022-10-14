@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "API Notes and Takeaways",
-            "content": "xyz .",
+            "content": "What is API? . API stands for Application Programming Interface | API is a set of code that lets data be transferred between two applications | Easy to remember: API is the ‘messenger’. It takes requests and then tells a system exactly what you want to do. Then it returns the response back to you | Real Life Analogy: At a restaurant, you are sitting at a table and looking at the order choices on the menu. The kitchen is the system that will prepare your order. The link that will communicate your order to the kitchen and deliver the food to your table is the waiter or API! | . Takeaways . API is an important tool used for data transmission and communication | the client sends a request | application sending the response back is the server | API communicates between client and server | . Extra Research: . What is an API Endpoint? . An API Endpoint are kind of touch points in the API communication system | They have server URLS , specific digital locations | . Other Features on Rapid? . Discussions, tutorials | In examples theres a place called “schema” – research more about this | Schema section has headers | .",
             "url": "https://tanishapatil1234.github.io/test-fastpage-tp/posts/api_notes",
             "relUrl": "/posts/api_notes",
             "date": " • Oct 13, 2022"
