@@ -267,20 +267,9 @@
   
 
   
-      ,"page1": {
-          "title": "Submenu",
-          "content": "Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel . link . HTML fragments and JS data to build a table . link .",
-          "url": "https://tanishapatil1234.github.io/test-fastpage-tp/_pages/07_submenu.html",
-          "relUrl": "/_pages/07_submenu.html",
-          "date": ""
-      }
-      
-  
 
   
-
-  
-      ,"page3": {
+      ,"page2": {
           "title": "About Me",
           "content": "| What is API? | API Example | .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/about/",
@@ -314,7 +303,7 @@
   
 
   
-      ,"page13": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/robots.txt",
