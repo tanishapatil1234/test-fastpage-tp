@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Unit 1",
-            "content": "Think Pair Share : . Team Collab . Notes on Collaboration . Computing innovation: integrates the use of a program in order to function | Collaboration is necessary in order to avoid bias, and have new perspectives in development. This is clearly shown in the differences between Super Mario Bro 2 and 3 | Collaboration teaches skills like: communication, negotiation, conflict resolution, consensus building | Pair programming: is when two people work as a pair on a program together. One types code while other observes and looks for errors | Think Pair Share: is when you think on your own, think with a partner, and then share with a larger group | You can collaborate using repl, github, shared doc, comments in code | .",
-            "url": "https://tanishapatil1234.github.io/test-fastpage-tp/posts/unit1",
-            "relUrl": "/posts/unit1",
+            "title": "Unit1",
+            "content": "toc: true comments: true layout: post title: Unit 1 description: Notes on Collaboration videos + Think Pair Share tags: [blogs] permalink: /posts/unit1 — . Think Pair Share : . Team Collab . Notes on Collaboration . Computing innovation: integrates the use of a program in order to function | Collaboration is necessary in order to avoid bias, and have new perspectives in development. This is clearly shown in the differences between Super Mario Bro 2 and 3 | Collaboration teaches skills like: communication, negotiation, conflict resolution, consensus building | Pair programming: is when two people work as a pair on a program together. One types code while other observes and looks for errors | Think Pair Share: is when you think on your own, think with a partner, and then share with a larger group | You can collaborate using repl, github, shared doc, comments in code | .",
+            "url": "https://tanishapatil1234.github.io/test-fastpage-tp/2022/11/04/unit1.html",
+            "relUrl": "/2022/11/04/unit1.html",
             "date": " • Nov 4, 2022"
         }
         
