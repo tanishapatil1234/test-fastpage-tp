@@ -3,6 +3,7 @@ title: Night at The Museum Blog
 description: Blog on experiences at Night at the Museum
 tags: [final]
 layout: post
+permalink: /posts/natm
 ---
 ![]({{site.baseurl}}/images/natm)
 Night of the Museum was a very fun but also eye opening experience.
