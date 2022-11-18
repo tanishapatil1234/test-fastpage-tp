@@ -41,7 +41,7 @@ type: pbl
             </tr>
             </table>
         </div>
-        <div id="Corresponding Color">color</div>
+        <div id="color">color</div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %} 
@@ -83,7 +83,7 @@ type: pbl
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parse Int(binary, 2).tostring(16);
+        var color = "#" + parseInt(binary, 2).tostring(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -92,7 +92,7 @@ type: pbl
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
         // Color code conversion
-         document.getElementById('color').style.backgroundColor = color ; 
+         document.getElementById('color').style.backgroundColor = color; 
     }
     //
     function decimal_2_base(decimal, base) {
