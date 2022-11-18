@@ -1,9 +1,7 @@
 ---
-title: Binary Conversion Color
+title: Binary - Color
 layout: default
-description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 permalink: /frontend/binary-color
-image: /images/binary.png
 categories: [3.B, 3.C, C4.4]
 tags: [html, liquid, javascript]
 week: 10
@@ -41,7 +39,7 @@ type: pbl
             </tr>
             </table>
         </div>
-        <div id="COLOR">color</div>
+        <div id="color">color</div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %} 
@@ -158,55 +156,4 @@ type: pbl
         }
         }
     }
-    <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0lax">Color</th>
-    <th class="tg-0lax">Hexadecimal</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0lax">Black</td>
-    <td class="tg-0lax">#000000</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">White</td>
-    <td class="tg-0lax">#FFFFFF</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Red</td>
-    <td class="tg-0lax">#FF0000</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Green</td>
-    <td class="tg-0lax">#00FF00</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Blue</td>
-    <td class="tg-0lax">#0000FF</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Yellow</td>
-    <td class="tg-0lax">#FFFF00</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Cyan</td>
-    <td class="tg-0lax">#00FFFF</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Magenta</td>
-    <td class="tg-0lax">#FF00FF</td>
-  </tr>
-</tbody>
-</table>
-
 </script>
