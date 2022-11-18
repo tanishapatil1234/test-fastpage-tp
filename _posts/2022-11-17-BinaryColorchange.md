@@ -32,7 +32,7 @@ type: pbl
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
-                <td id="octal">0</td>
+                <td id="octtal">0</td>
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
