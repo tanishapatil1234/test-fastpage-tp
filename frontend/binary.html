@@ -117,7 +117,7 @@ window.onload = wrap_img;
             </tr>
             </table>
         </div>
-        <div id="Corresponding Color">color</div>
+        <div id="color">color</div>
         <div class="col-12">
             
              
@@ -201,7 +201,7 @@ window.onload = wrap_img;
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parse Int(binary, 2).tostring(16);
+        var color = "#" + parseInt(binary, 2).tostring(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -210,7 +210,7 @@ window.onload = wrap_img;
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
         // Color code conversion
-         document.getElementById('color').style.backgroundColor = color ; 
+         document.getElementById('color').style.backgroundColor = color; 
     }
     //
     function decimal_2_base(decimal, base) {
