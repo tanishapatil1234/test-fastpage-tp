@@ -1,8 +1,8 @@
 ---
-title: Binary Math
+title: Binary Conversion Color
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
-permalink: /frontend/binary
+permalink: /frontend/binary-color
 image: /images/binary.png
 categories: [3.B, 3.C, C4.4]
 tags: [html, liquid, javascript]
@@ -12,9 +12,9 @@ type: pbl
 
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
-<!-- Hack 3: do your on thing -->
+<!-- Hack 3: do your own thing -->
 
-{% assign BITS = 8 %}
+{% assign BITS = 24 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -83,7 +83,7 @@ type: pbl
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parseInt(binary, 2).tostring(16);
+        var color = "#" + parseInt(binary, 2).toString(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -91,8 +91,7 @@ type: pbl
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
-        // Color code conversion
-         document.getElementById('color').style.backgroundColor = color; 
+        document.getElementById("color").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
