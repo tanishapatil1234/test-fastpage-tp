@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -359,6 +359,84 @@ The following are the steps to determine the network that an IP address is in gi
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">convert</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&gt;=</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">convert</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">%</span> <span class="mf">2</span><span class="p">;</span>
+      <span class="p">}</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span> <span class="o">%</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">end</span> <span class="o">=</span> <span class="s1">' '</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="nx">convert</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+evalmachine.&lt;anonymous&gt;:1
+function convert(num) {
+                ^
+
+RangeError: Maximum call stack size exceeded
+    at convert (evalmachine.&lt;anonymous&gt;:1:17)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)
+    at convert (evalmachine.&lt;anonymous&gt;:3:9)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">num</span> <span class="o">=</span> <span class="kr">int</span><span class="p">(</span><span class="nx">input</span><span class="p">(</span><span class="s2">"Enter a decimal number to be converted into binary."</span><span class="p">))</span>
+<span class="nx">def</span> <span class="nx">convert</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="o">:</span>
+	
+	<span class="k">if</span> <span class="nx">num</span> <span class="o">&gt;=</span> <span class="mf">1</span><span class="o">:</span>
+		<span class="nx">convert</span><span class="p">(</span><span class="nx">num</span> <span class="c1">// 2)  # double slash : divide the first number by the second, rounds to the nearest integer</span>
+	<span class="nx">print</span><span class="p">(</span><span class="nx">num</span> <span class="o">%</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">end</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span> <span class="err">#</span> <span class="nx">end</span> <span class="o">=</span> <span class="s1">''</span> <span class="nx">signifies</span> <span class="nx">what</span> <span class="nx">will</span> <span class="nx">come</span> <span class="nx">between</span> <span class="nx">each</span> <span class="nx">printed</span> <span class="nx">num</span>
+ 
+<span class="err">#</span> <span class="nx">Driver</span> <span class="nx">Code</span>
+<span class="nx">print</span><span class="p">(</span><span class="s2">"Binary of num "</span> <span class="o">+</span> <span class="nx">str</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" is:"</span><span class="p">,</span> <span class="nx">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+<span class="nx">convert</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
