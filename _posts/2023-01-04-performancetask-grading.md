@@ -1,6 +1,6 @@
 ---
 title: Performance Task Grading
-layout: default
+layout: post
 permalink: /posts/performancetaskgrading
 ---
 ## Submission 1
