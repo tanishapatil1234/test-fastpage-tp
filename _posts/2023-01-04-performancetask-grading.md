@@ -2,7 +2,6 @@
 title: Performance Task Grading
 layout: default
 permalink: /posts/performancetaskgrading
-categories: [3.B, 3.C, C4.4]
 ---
 ## Submission 1
 | Reporting Category        | My Score | College Board Score | Comments                                                                                                                                                                                                                                                    |
