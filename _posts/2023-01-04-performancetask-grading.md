@@ -3,16 +3,17 @@ title: Performance Task Grading
 layout: post
 permalink: /posts/performancetaskgrading
 ---
-## Submission 1
-| Reporting Category        | My Score | College Board Score | Comments                                                                                                                                                                                                                                                    |
-|---------------------------|----------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Program Purpose/ Function | 1        | 0                   | The person did not distinguish<br>between program purpose and <br>functionality. The person only <br>described functionality.                                                                                                                               |
-| Data Abstraction          | 1        | 1                   | Includes two code segments, <br>implements a list for a desired <br>function                                                                                                                                                                                |
-| Managing Complexity       | 0        | 0                   | The provided explanation did<br>not support how the use of a list<br>would manage the program's <br>complexity. The use of a list <br>did not have any benefit or <br>advantage to fixing errors in the<br>code over something else such as<br>a variable.  |
-| Procedural Abstraction    | 1        | 1                   | A procedure, ratioCalculate <br>was defined and called. Person also <br>described how the procedure is used and<br>relted to the overall function of the <br>program                                                                                        |
-| Algorithm Implementation  | 1        | 1                   | Program uses all three: sequencing, <br>selection (if), and iteration (through <br>a list)                                                                                                                                                                  |
-| Testing                   | 1        | 1                   | Program is tests and when functions are<br>called they properly run.                                                                                                                                                                                        |
-## Submission 2
+## Grading 1
+| Reporting Category 	| My Score 	| College Board Score 	| Comments 	|
+|---	|---	|---	|---	|
+| Program Purpose/ Function 	| 1 	| 0	| The person did not distinguish between program purpose and functionality. The person only described functionality  	|
+| Data Abstraction 	| 1 	| 1 	| Includes two code segments, implements a list for a desired function	|
+| Managing Complexity 	| 0 	| 0 	| The provided explanation did not support how the use of a list would manage the program’s complexity. The use of a list did not have any benefit or advantage to fixing errors in the code over something else such as a variable.  	|
+| Procedural Abstraction 	| 1 	| 1 	| A procedure, ratioCalculate was defined and called. Person also described how the procedure is used and relted to the overall function of the program. |
+| Algorithm Implementation 	| 1 	| 1 	| Program uses all three: sequencing,selection (if), and iteration (through a list) 	|
+| Testing 	| 1 	| 1 	| Program is tests and when functions are called they properly run. 	|
+
+## Grading 2
 | Reporting Category 	| My Score 	| College Board Score 	| Comments 	|
 |---	|---	|---	|---	|
 | Program Purpose/ Function 	| 1 	| 1 	| The person distinguished<br>between program purpose and <br>functionality. Had a clear purpose <br>and clear function.  	|
