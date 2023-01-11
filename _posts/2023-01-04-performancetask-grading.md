@@ -3,6 +3,7 @@ title: Performance Task Grading
 layout: post
 description: Blog on peer grading
 tags: [collegeboard]
+permalink: /collegeboard/ptgrading
 ---
 ## Grading 1
 | Reporting Category 	| My Score 	| College Board Score 	| Comments 	|
