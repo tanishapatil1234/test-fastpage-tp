@@ -15,9 +15,8 @@ tags: [javascript, fetch, get, post, put]
   <tr>
     <th>User ID</th>
     <th>Name</th>
-    <th>Posts</th>
-    <th>DOB</th>
-    <th>Age</th>
+    <th>Review</th>
+    <th>Rate</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -29,22 +28,16 @@ tags: [javascript, fetch, get, post, put]
 
 <form action="javascript:create_user()">
     <p><label>
-        User ID:
-        <input type="text" name="uid" id="uid" required="" />
-    </label></p>
-    <p><label>
         Name:
         <input type="text" name="name" id="name" required="" />
     </label></p>
     <p><label>
-        Password:
-        <input type="password" name="password" id="password" required="" />
-        Verify Password:
-        <input type="password" name="passwordV" id="passwordV" required="" />
+        Review:
+        <input type="text" name="review" id="review" required="" />
     </label></p>
     <p><label>
-        Birthday:
-        <input type="date" name="dob" id="dob" />
+        Rate:
+        <input type="integer" name="rate" id="rate" required="" />
     </label></p>
     <p>
         <button>Create</button>
@@ -56,7 +49,7 @@ tags: [javascript, fetch, get, post, put]
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
   //const url = "http://localhost:8086/api/users"
-  const url = "https://flask.nighthawkcodingsociety.com/api/users"
+  const url = "http://127.0.0.1:5000/"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
 
@@ -116,10 +109,9 @@ tags: [javascript, fetch, get, post, put]
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
-        uid: document.getElementById("uid").value,
         name: document.getElementById("name").value,
-        password: document.getElementById("password").value,
-        dob: document.getElementById("dob").value
+        review: document.getElementById("review").value,
+        rate: document.getElementById("rate").value
     };
     const requestOptions = {
         method: 'POST',
@@ -156,74 +148,25 @@ tags: [javascript, fetch, get, post, put]
 
   function add_row(data) {
     const tr = document.createElement("tr");
-    const uid = document.createElement("td");
     const name = document.createElement("td");
-    const posts = document.createElement("td")
-    const dob = document.createElement("td");
-    const age = document.createElement("td");
+    const review = document.createElement("td")
+    const rate = document.createElement("td");
   
 
     // obtain data that is specific to the API
-    uid.innerHTML = data.uid; 
     name.innerHTML = data.name; 
-    posts.innerHTML = data.posts.length;
-    dob.innerHTML = data.dob; 
-    age.innerHTML = data.age; 
+    review.innerHTML = data.review;
+    rate.innerHTML = data.rate; 
 
     // add HTML to container
-    tr.appendChild(uid);
     tr.appendChild(name);
-    tr.appendChild(posts);
-    tr.appendChild(dob);
-    tr.appendChild(age);
+    tr.appendChild(review);
+    tr.appendChild(rate);
 
     resultContainer.appendChild(tr);
   }
 
 </script>
 </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/APCSP/"></data>
-
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="https://nighthawkcoders.github.io/APCSP/feed.xml">
-            <svg class="svg-icon orange"><use xlink:href="/APCSP/assets/minima-social-icons.svg#rss"></use>
-</svg><span>Subscribe</span>
-          </a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <p>AP Computer Science Principles course materials.</p>
-      </div>
-    </div>
-
-    <div class="social-links"><ul class="social-media-list"><li>
-  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
-    <svg class="svg-icon grey"><use xlink:href="/APCSP/assets/minima-social-icons.svg#github"></use>
-</svg>
-  </a>
-</li>
-<li>
-  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
-    <svg class="svg-icon grey"><use xlink:href="/APCSP/assets/minima-social-icons.svg#twitter"></use>
-</svg>
-  </a>
-</li>
-<li>
-  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
-    <svg class="svg-icon grey"><use xlink:href="/APCSP/assets/minima-social-icons.svg#youtube"></use>
-</svg>
-  </a>
-</li>
-</ul>
-</div>
-
-  </div>
-
-</footer>
-</body>
-
+    </main>
 </html>
