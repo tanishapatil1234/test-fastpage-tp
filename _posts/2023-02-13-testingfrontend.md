@@ -66,9 +66,8 @@ tags: [javascript, fetch, get, post, put]
       credentials: 'omit', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json'
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST',
-        'Access-Control-Allow-Methods': 'GET',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'POST'}
       },
     };
 
