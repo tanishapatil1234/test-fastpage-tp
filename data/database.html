@@ -94,7 +94,6 @@ window.onload = wrap_img;
 <table>
   <thead>
   <tr>
-    <th>User ID</th>
     <th>Name</th>
     <th>Review</th>
     <th>Rate</th>
@@ -148,6 +147,9 @@ window.onload = wrap_img;
       credentials: 'omit', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json'
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Methods': 'GET',
       },
     };
 
