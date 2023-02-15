@@ -10,21 +10,21 @@ tags: [javascript, fetch, get, post, put]
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reviews average:</title>
+    <title>Review's Average: </title>
   </head>
   <body>
-    <p> id = "response"</p>
+    <p id="response"></p>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const response = xhr.responseText;
+          const responseElement = document.getElementById("response");
+          responseElement.innerHTML = response;
+        }
+      };
+      xhr.open("GET", "http://localhost:5000/average");
+      xhr.send();
+    </script>
   </body>
-<script>
-  fetch('http://localhost:5000/average', "GET")
-  .then(response => response.text())
-  .then(data => {
-    const container = document.getElementById('container');
-    container.innerHTML = data;
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  })
-</script>
-
 </html>
