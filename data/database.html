@@ -131,7 +131,7 @@ window.onload = wrap_img;
   //const url = "http://localhost:8086/api/users"
   const url = "http://127.0.0.1:5000/"
   const create_fetch = url + '/create';
-  const read_fetch = url ;
+  const read_fetch = url;
 
   // Load users on page entry
   read_users();
@@ -146,9 +146,10 @@ window.onload = wrap_img;
       cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'omit', // include, *same-origin, omit
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Methods':'POST',
-        'Access-Control-Allow-Methods':'GET'
+        'Content-Type': 'application/json'
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Methods':'GET'}
       },
     };
 
