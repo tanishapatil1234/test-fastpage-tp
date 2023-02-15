@@ -29,16 +29,14 @@ tags: [javascript, fetch, get, post, put]
       }
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          const response = xhr.responseText;
-          const responseElement = document.getElementById("response");
-          responseElement.innerHTML = response;
-        }
-      };
-      xhr.open(url, options);
-      xhr.send();
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          console.log('The average rate is: ' + data)
+          })
+        .catch(error => {
+          console.error('Error fetching')
+        });
     </script>
   </body>
 </html>
