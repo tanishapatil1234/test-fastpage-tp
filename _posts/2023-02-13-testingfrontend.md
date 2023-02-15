@@ -67,7 +67,7 @@ tags: [javascript, fetch, get, post, put]
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Methods':'POST',
-        'Access-Control-Allow-Methods':'GET'}
+        'Access-Control-Allow-Methods':'GET'
       },
     };
 
