@@ -88,8 +88,27 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <pre><code class="language-{python}">print("Hello")
-</code></pre>
+        <p>&lt;!DOCTYPE html&gt;</p>
+<html>
+  <head>
+    <title>Reviews average:</title>
+  </head>
+  <body>
+    <p> id = "response"</p>
+  </body>
+<script>
+  fetch('http://localhost:5000/average', "GET")
+  .then(response => response.text())
+  .then(data => {
+    const container = document.getElementById('container');
+    container.innerHTML = data;
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  })
+</script>
+
+</html>
 
       </div>
     </main><footer class="site-footer h-card">
