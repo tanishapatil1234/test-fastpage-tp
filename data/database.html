@@ -89,13 +89,27 @@ window.onload = wrap_img;
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <p>&lt;!DOCTYPE html&gt;</p>
-<html>
+<html> 
+  
   <head>
     <title>Review's Average: </title>
   </head>
   <body>
     <p id="response"></p>
     <script>
+        const url = "http://localhost:5000/";
+    const options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin':'https://tanishapatil1234.github.io',
+        'Access-Control-Allow-Methods':'GET'
+      }
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
       const xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -104,7 +118,7 @@ window.onload = wrap_img;
           responseElement.innerHTML = response;
         }
       };
-      xhr.open("GET", "http://localhost:5000/average");
+      xhr.open(url, options);
       xhr.send();
     </script>
   </body>
