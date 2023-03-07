@@ -1,6 +1,6 @@
 ---
 title: Binary - Color
-layout: default
+layout: base
 permalink: /frontend/binary-color
 categories: [3.B, 3.C, C4.4]
 tags: [html, liquid, javascript]
