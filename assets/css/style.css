@@ -537,13 +537,13 @@ p code { font-size: 19px; }
 
 p code { font-size: 19px; }
 
-html, body, input, textarea, select, button { color: rgba(89, 33, 153, 0.38) !important; background-color: #000000 !important; }
+html, body, input, textarea, select, button { color: rgba(254, 239, 229, 0.38) !important; background-color: #000000 !important; }
 
 a { color: #FEEFE5 !important; }
 
-a:hover { color: rgba(89, 33, 153, 0.38) !important; }
+a:hover { color: rgba(254, 239, 229, 0.38) !important; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(89, 33, 153, 0.38) !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(254, 239, 229, 0.38) !important; }
 
 .site-nav { background-color: #000000; border-color: #242120; }
 
@@ -551,19 +551,19 @@ a:hover { color: rgba(89, 33, 153, 0.38) !important; }
 
 pre, code { border-color: #242120; background-color: #0d0c0b; }
 
-.page-description { color: rgba(89, 33, 153, 0.38); }
+.page-description { color: rgba(254, 239, 229, 0.38); }
 
-.post-meta { color: rgba(89, 33, 153, 0.38); }
+.post-meta { color: rgba(254, 239, 229, 0.38); }
 
-.post-content p, .post-content li { color: rgba(89, 33, 153, 0.38); }
+.post-content p, .post-content li { color: rgba(254, 239, 229, 0.38); }
 
-.btn { background-color: #0d0c0b !important; color: rgba(89, 33, 153, 0.38) !important; border-color: #242120 !important; }
+.btn { background-color: #0d0c0b !important; color: rgba(254, 239, 229, 0.38) !important; border-color: #242120 !important; }
 
 .btn:hover { background-color: #000000 !important; }
 
-table th { background-color: #0d0c0b; border-color: #242120; color: rgba(89, 33, 153, 0.38); }
+table th { background-color: #0d0c0b; border-color: #242120; color: rgba(254, 239, 229, 0.38); }
 
-table td { background-color: #000000; border-color: #242120; color: rgba(89, 33, 153, 0.38); }
+table td { background-color: #000000; border-color: #242120; color: rgba(254, 239, 229, 0.38); }
 
 .flash { color: #000000 !important; filter: brightness(80%); }
 
@@ -571,6 +571,6 @@ canvas { filter: invert(100%); }
 
 .post-list > li > div { box-shadow: none !important; background-color: #0d0c0b; border: none !important; }
 
-li .post-meta-description { color: rgba(89, 33, 153, 0.38) !important; }
+li .post-meta-description { color: rgba(254, 239, 229, 0.38) !important; }
 
 /*# sourceMappingURL=style.css.map */
