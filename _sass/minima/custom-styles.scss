@@ -12,9 +12,9 @@
 
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
-$high-emph: rgba(rgb(89, 33, 153), 0.38);
-$med-emph: rgba(rgb(89, 33, 153), 0.38); //Noicee
-$low-emph: rgba(rgb(89, 33, 153), 0.38); 
+$high-emph: rgba(#FEEFE5, 0.38);
+$med-emph: rgba(#FEEFE5, 0.38); //Noicee
+$low-emph: rgba(#FEEFE5, 0.38); 
 $dark-grey : #000000;
 // $dark-grey : #1F1B24;
 $overlay: mix($dark-grey, #FEEFE5, 95%);
