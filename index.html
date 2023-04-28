@@ -3,16 +3,26 @@ layout: home
 search_exclude: true
 image: images/logo.png
 ---
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Change Theme</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="../assets/css/dark-mode.scss">
+        <link rel="stylesheet" href="../assets/css/light-mode.scss" id="theme-link">
     </head>
     <body>
         <button id="change-theme-btn">theme</button>
-        <script src="change-theme.js"></script>
+        <script>
+            const toggleButton = document.querySelector('#change-theme-btn');
+            const themeLink = document.querySelector('#theme-link');
+            toggleButton.addEventListener('click', () => {
+                if (themeLink.getAttribute('href') === '../assets/css/dark-mode.css') {
+                    themeLink.setAttribute('href', '../assets/css/light-mode1.css');
+                } else {
+                    themeLink.setAttribute('href', '../assets/css/dark-mode.css');
+                }
+            });
+        </script>
     </body>
 </html>
 ![]({{site.baseurl}}/images/cover.gif "https://github.com/tanishapatil1234/test-fastpage-tp"){:style="display:block; margin-left:auto; margin-right:auto"}
