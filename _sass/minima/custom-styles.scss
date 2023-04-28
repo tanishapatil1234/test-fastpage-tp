@@ -16,73 +16,74 @@ $high-emph: rgba(#FEEFE5, 0.38);
 $med-emph: rgba(#FEEFE5, 0.38); //Noicee
 $low-emph: rgba(#FEEFE5, 0.38); 
 $dark-grey : #010101;
-// $dark-grey : #1F1B24;
-$overlay: mix($dark-grey, #FEEFE5, 95%);
-$overlay-light: mix($dark-grey, #FEEFE5, 86%);
-html, body, input, textarea, select, button {
-  color: $high-emph !important;
-  background-color: $dark-grey !important;
+$dark: #333;
+$light: #fff;
+
+:root {
+    font-size: 25vmin;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
 }
-a {
-    color:  #FEEFE5 !important;
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: $light;
+    color: $dark;
+    transition: all 0.15s ease-out;
+
+    &.dark-theme {
+        background-color: $dark;
+        color: $light;
+    }
 }
-a:hover {
-    color:$high-emph !important;
-}
-.site-title, .site-title:visited, .site-nav, .page-link {
-    color: $high-emph !important;
-}
-.site-nav {
-    background-color: $dark-grey;
-    border-color: $overlay-light;
-}
-* {
-    scrollbar-color: $dark-grey $overlay-light;
-}
-pre, code {
-    // BVas a lighter colour to better highlight short code words
-    border-color: $overlay-light;
-    background-color: $overlay;
-}
-.page-description {
-    color: $med-emph;
-}
-.post-meta {
-    color: $low-emph;
-}
-.post-content p, .post-content li {
-    color: $med-emph;
-}
-.btn {
-    background-color: $overlay !important;
-    color: $high-emph !important;
-    border-color: $overlay-light !important;
-}
-.btn:hover {
-    background-color: $dark-grey !important;
-}
-table th{
-    background-color: $overlay;
-    border-color: $overlay-light;
-    color: $high-emph;
-}
-table td{
-    background-color: $dark-grey;
-    border-color: $overlay-light;
-    color: $med-emph;
-}
-.flash {
-    color: $dark-grey !important;
-    filter: brightness(80%);
-}
-canvas {
-    filter: invert(100%);
-}
-.post-list > li > div {
-    box-shadow: none !important;
-    background-color: $overlay;
-    border: none !important;
-}
-li .post-meta-description {
-    color: $med-emph !important;
+
+#change-theme-btn {
+    font: inherit;
+    padding: 0.1em 0.25em;
+    border: 0;
+    outline: 0;
+    color: $light;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+
+    &::before, &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark;
+        transition: all 0.15s ease-out;
+    }
+
+    &::after {
+        background-color: $light;
+        left: 100%;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    .dark-theme & {
+        color: $dark;
+
+        &::before {
+            left: -100%;
+        }
+
+        &::after {
+            left: 0;
+        }
+    }
 }
