@@ -537,40 +537,24 @@ p code { font-size: 19px; }
 
 p code { font-size: 19px; }
 
-html, body, input, textarea, select, button { color: rgba(254, 239, 229, 0.38) !important; background-color: #010101 !important; }
+:root { font-size: 25vmin; font-family: 'Roboto', sans-serif; width: 100%; height: 100%; }
 
-a { color: #FEEFE5 !important; }
+body { margin: 0; display: flex; justify-content: space-around; align-items: center; height: 100%; background-color: #fff; color: #333; transition: all 0.15s ease-out; }
 
-a:hover { color: rgba(254, 239, 229, 0.38) !important; }
+body.dark-theme { background-color: #333; color: #fff; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(254, 239, 229, 0.38) !important; }
+#change-theme-btn { font: inherit; padding: 0.1em 0.25em; border: 0; outline: 0; color: #fff; cursor: pointer; transition: all 0.15s ease-out; position: relative; background-color: transparent; overflow: hidden; }
 
-.site-nav { background-color: #010101; border-color: #242221; }
+#change-theme-btn::before, #change-theme-btn::after { content: ''; z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #333; transition: all 0.15s ease-out; }
 
-* { scrollbar-color: #010101 #242221; }
+#change-theme-btn::after { background-color: #fff; left: 100%; }
 
-pre, code { border-color: #242221; background-color: #0e0d0c; }
+#change-theme-btn:hover { text-decoration: underline; }
 
-.page-description { color: rgba(254, 239, 229, 0.38); }
+.dark-theme #change-theme-btn { color: #333; }
 
-.post-meta { color: rgba(254, 239, 229, 0.38); }
+.dark-theme #change-theme-btn::before { left: -100%; }
 
-.post-content p, .post-content li { color: rgba(254, 239, 229, 0.38); }
-
-.btn { background-color: #0e0d0c !important; color: rgba(254, 239, 229, 0.38) !important; border-color: #242221 !important; }
-
-.btn:hover { background-color: #010101 !important; }
-
-table th { background-color: #0e0d0c; border-color: #242221; color: rgba(254, 239, 229, 0.38); }
-
-table td { background-color: #010101; border-color: #242221; color: rgba(254, 239, 229, 0.38); }
-
-.flash { color: #010101 !important; filter: brightness(80%); }
-
-canvas { filter: invert(100%); }
-
-.post-list > li > div { box-shadow: none !important; background-color: #0e0d0c; border: none !important; }
-
-li .post-meta-description { color: rgba(254, 239, 229, 0.38) !important; }
+.dark-theme #change-theme-btn::after { left: 0; }
 
 /*# sourceMappingURL=style.css.map */
