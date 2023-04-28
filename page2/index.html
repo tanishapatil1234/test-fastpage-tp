@@ -89,16 +89,26 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>&lt;!DOCTYPE html&gt;</p>
-<html lang="en">
+        <div class="home"><html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>Change Theme</title>
-        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.scss" />
+        <link rel="stylesheet" href="../assets/css/light-mode.scss" id="theme-link" />
     </head>
     <body>
         <button id="change-theme-btn">theme</button>
-        <script src="change-theme.js"></script>
+        <script>
+            const toggleButton = document.querySelector('#change-theme-btn');
+            const themeLink = document.querySelector('#theme-link');
+            toggleButton.addEventListener('click', () => {
+                if (themeLink.getAttribute('href') === '../assets/css/dark-mode.css') {
+                    themeLink.setAttribute('href', '../assets/css/light-mode1.css');
+                } else {
+                    themeLink.setAttribute('href', '../assets/css/dark-mode.css');
+                }
+            });
+        </script>
     </body>
 </html>
 <p><img src="/test-fastpage-tp/images/cover.gif" alt="" title="https://github.com/tanishapatil1234/test-fastpage-tp" style="display:block; margin-left:auto; margin-right:auto" /></p>
