@@ -61,5 +61,5 @@ Questions
 > Predictive analysis can help with identifying consumer trends, market behavior, and more processes which can help with the decision making process of the buisness's operations.
 
 # TENSORFLOW Hacks
-For these extra credit hacks, I worked with my own set of data to analyze cell data and make predictions based on it's characteristics. 
-[LINK](https://github.com/tanishapatil1234/sourcecode-repo/blob/master/_notebooks/2023-04-02-Breast_Cancer_LR.ipynb)
+IN PROGRESS 🚧
+[LINK]()
