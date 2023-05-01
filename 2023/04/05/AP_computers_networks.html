@@ -97,7 +97,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -115,6 +115,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#parallel-and-distributed-computing">Parallel and Distributed Computing</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#my-notes">My Notes</a></li>
+<li class="toc-entry toc-h1"><a href="#41-video-1">4.1 Video 1</a></li>
+<li class="toc-entry toc-h1"><a href="#41-video-2">4.1 Video 2</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#computer-protocol-methods">Computer Protocol Methods:</a></li>
+</ul>
+</li>
 </ul><h2 id="requirements">
 <a class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 <blockquote>
@@ -129,13 +136,14 @@ window.onload = wrap_img;
 
 <p>List specification of your Computer, or Computers if working as Pair/Trio</p>
 <ul>
-  <li>Processor GHz:</li>
-  <li>Memory in GB:</li>
-  <li>Storage in GB:</li>
-  <li>OS:</li>
+  <li>Processor GHz: 2.20</li>
+  <li>Memory in GB: 4GB</li>
+  <li>Storage in GB: 237 GB</li>
+  <li>OS: Microsoft Windows 11</li>
 </ul>
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
+
 <ul>
   <li>Input devices</li>
   <li>Output devices</li>
@@ -147,6 +155,8 @@ window.onload = wrap_img;
   <li>Inspect Running Code</li>
   <li>Inspect Variables</li>
 </ul>
+
+<p><img src="https://user-images.githubusercontent.com/111611921/235412829-8794437e-3395-458b-881d-42f464f27dda.png" alt="image"></p>
 
 <p><img src="/test-fastpage-tp/images/cpu.jpeg" alt="Computer Hardware"></p>
 
@@ -186,8 +196,16 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>Complete True of False Questions</p>
+  <li>Complete True of False Questions
+    <ol>
+      <li>T: Open standards and protocols enable diff3erent manufacturers and developers to build hardware and software that can communicate with hardware/software on the rest of the internet</li>
+      <li>F: IETF is a task force used to enforce laws to keep manufacturers out of the internet</li>
+      <li>F: routes are determined in advance and are not flexible</li>
+      <li>T: Protocol is agreed upon set of rules that specify behavior of a system</li>
+      <li>F: UDP guarentees transfers and is faster</li>
+      <li>F: WWW is the internet
+T. T: HTTP is a protocol used by WWW</li>
+    </ol>
   </li>
   <li>Essential Knowledge
     <ul>
@@ -210,7 +228,7 @@ window.onload = wrap_img;
   <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas</li>
 </ul>
 
-<p><img src="/test-fastpage-tp/images/fullstack.png" alt="Full Stack"></p>
+<p><img src="https://user-images.githubusercontent.com/111611921/235413363-021e4c37-e3b7-4cb0-bd15-f30351aaf7e9.png" alt="image"></p>
 
 <ul>
   <li>Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following …</li>
@@ -245,7 +263,8 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+  <li>Complete the network activity, summarize your understanding of fault tolerance.
+Fault tolerance is a system’s ability to function even there are multiple errors or fault. SImply put, it is the system tolerating possible faults. When one component or path fails, another one can take over in it’s place and have the exact same function.</li>
 </ul>
 
 <h3 id="parallel-and-distributed-computing">
@@ -256,56 +275,45 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+    <p>What is naturally Distributed in Frontend/Backend archeticture? 
+Frontend is distributed among users as it runs on their devices. The frontend interacts with the backend thorugh API. Backend handles data processing and storage and is distributes across servers.</p>
   </li>
   <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
+    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+ENV GUNICORN_CMD_ARGS=”–workers=1 –bind=0.0.0.0:8086 sets environment variable GUNICORN_CMD_ARGS with two specifications, =”–workers=1 specifies that one worker process should be used (no parallel), and –bind=0.0.0.0:8086 tells the port.</p>
   </li>
 </ul>
 
-<blockquote>
-  <p>Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.</p>
-  <ul>
-    <li>Review this <a href="https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray">article</a>…  Can you get parallel code on images to work more effectively?  I have not tried Ray.</li>
-  </ul>
-</blockquote>
-
+<h2 id="my-notes">
+<a class="anchor" href="#my-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Notes</h2>
+<h1 id="41-video-1">
+<a class="anchor" href="#41-video-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 Video 1</h1>
 <ul>
-  <li>Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.</li>
+  <li>As time evolved, computers became smaller</li>
+  <li>computers are capable of sending and recieving data</li>
+  <li>A computer system is a group of computing devices and programs working together for a joint purpose</li>
+  <li>A computer network is a group of interconnected computing devices capable of sending or recieving data, type of computing system</li>
+  <li>Packet switching: message is broken up into files and sent in any order. the packets are reassembled by reciever’s device</li>
+  <li>Routing is the process of finding a path from sender to reciever</li>
+  <li>A path between two computing devices on a computer netqork (a sender and a reciever) is a sequence of directly connected computing devices that begins at the sender and ends at the reciever</li>
+  <li>Bandwith: maximum amount of data that can be snet in a fixed amount of time on a computer network (bits/second)</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ray</span>
+<h1 id="41-video-2">
+<a class="anchor" href="#41-video-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1 Video 2</h1>
+<ul>
+  <li>Packet: small amount of data sent over a netqork. Each packet also includes the source and destination of the Data.</li>
+  <li>protocol: agreed upon set of rules that specify the behavior of a system
+    <h2 id="computer-protocol-methods">
+<a class="anchor" href="#computer-protocol-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Protocol Methods:</h2>
+  </li>
+  <li>OSI: open systems interconnect: layers you have to go through to communicate (7 groups of protocols)</li>
+  <li>TCP: establishes common standard for how to send messages</li>
+  <li>Network Access Layer: Setting things up in the hardware, NIC card or wire. MAC address is unique to each card. uses binary</li>
+  <li>INternet Protocol Layer (IP): Where the packets get set up with sender ip, reciever ip, metadata(contains information used for routing information).</li>
+  <li>MAC address are used to transport message from sender ip to reciever ip</li>
+</ul>
 
-<span class="c1"># define a simple function that takes a number and returns its square
-</span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-
-<span class="c1"># initialize Ray
-</span><span class="n">ray</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
-
-<span class="c1"># create a remote function that squares a list of numbers in parallel
-</span><span class="o">@</span><span class="n">ray</span><span class="p">.</span><span class="n">remote</span>
-<span class="k">def</span> <span class="nf">square_list</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">square</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
-
-<span class="c1"># define a list of numbers to square
-</span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="c1"># split the list into two parts
-</span><span class="n">split_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">part1</span><span class="p">,</span> <span class="n">part2</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[:</span><span class="n">split_idx</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">split_idx</span><span class="p">:]</span>
-
-<span class="c1"># call the remote function in parallel on the two parts
-</span><span class="n">part1_result</span> <span class="o">=</span> <span class="n">square_list</span><span class="p">.</span><span class="n">remote</span><span class="p">(</span><span class="n">part1</span><span class="p">)</span>
-<span class="n">part2_result</span> <span class="o">=</span> <span class="n">square_list</span><span class="p">.</span><span class="n">remote</span><span class="p">(</span><span class="n">part2</span><span class="p">)</span>
-
-<span class="c1"># get the results and combine them
-</span><span class="n">result</span> <span class="o">=</span> <span class="n">ray</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">part1_result</span><span class="p">)</span> <span class="o">+</span> <span class="n">ray</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">part2_result</span><span class="p">)</span>
-
-<span class="c1"># print the result
-</span><span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-</code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
