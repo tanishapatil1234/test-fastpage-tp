@@ -38,6 +38,9 @@ Questions
 10. What is the difference between a Series and a DataFrame in Pandas?
 > Dataframe is the entire table whereas the series is the column in the table. 
 
+# NUMPY HACKS
+[CLICK HERE](https://tanishapatil1234.github.io/test-fastpage-tp/2022/04/23/numpyhacks.html)
+
 # DATA ANALYSIS AND PREDICTIVE ANALYSIS Hacks
 1. How can Numpy and Pandas be used to preprocess data for predictive analysis?
 > Numpy and Pandas can be used for data cleaning, normalization, standardization, and data transformation to preprocess data for predictive analysis.
@@ -61,5 +64,5 @@ Questions
 > Predictive analysis can help with identifying consumer trends, market behavior, and more processes which can help with the decision making process of the buisness's operations.
 
 # TENSORFLOW Hacks
-IN PROGRESS 🚧
-[LINK]()
+> A personal project I did recently
+[CLICK HERE](https://github.com/tanishapatil1234/sourcecode-repo/blob/master/_notebooks/2023-04-02-Breast_Cancer_LR.ipynb)
