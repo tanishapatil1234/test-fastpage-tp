@@ -65,4 +65,3 @@ Questions
 
 # TENSORFLOW Hacks
 > A personal project I did recently
-[CLICK HERE](https://github.com/tanishapatil1234/sourcecode-repo/blob/master/_notebooks/2023-04-02-Breast_Cancer_LR.ipynb)
