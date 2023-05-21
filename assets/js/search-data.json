@@ -765,6 +765,17 @@
 
   
       ,"page3": {
+          "title": "Discover Albums",
+          "content": "Made By Tanisha Patil . . &#63; ♫⋆｡♪ 𝔻𝕚𝕤𝕔𝕠𝕧𝕖𝕣 𝔸𝕝𝕓𝕦𝕞𝕤 ₊˚♬ ﾟ. . Artist Name: Search Sort Alphabetically .",
+          "url": "https://tanishapatil1234.github.io/test-fastpage-tp/discoveralbums/",
+          "relUrl": "/discoveralbums/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page4": {
           "title": "Binary Buttons",
           "content": "Binary Number 1: Binary Number 2: . . .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/Binary%20Buttons/",
@@ -777,7 +788,7 @@
   
 
   
-      ,"page5": {
+      ,"page6": {
           "title": "Notes",
           "content": "| Unit 1 | Unit 4 | Final Exam | Night At The Museum | .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/notes/",
@@ -818,7 +829,7 @@
   
 
   
-      ,"page18": {
+      ,"page19": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tanishapatil1234.github.io/test-fastpage-tp/robots.txt",
