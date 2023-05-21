@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Disover Albums!</title>
+  <p align="right">Made By Tanisha Patil</p>
+  
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .album-card {
+      text-align: center;
+      color: white;
+      border-width: 0.1 cm;
+    }
+
+    .album-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .container {
+      background: linear-gradient(to bottom, #061429, #061429);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+
+    .btn {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 5px 10px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+    .btn:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+    .title {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+
+
+  </style> 
+</head>
+
+<button id="questionButton" class="btn" align="left">&#63;</button>
+<body class="container">
+  <h1 align="center" class="title">♫⋆｡♪ 𝔻𝕚𝕤𝕔𝕠𝕧𝕖𝕣 𝔸𝕝𝕓𝕦𝕞𝕤 ₊˚♬ ﾟ.</h1>
+ 
+  <form align="center" id="searchForm">
+    <label for="artistName">Artist Name:</label>
+    <input type="text" id="artistName" name="artistName" required>
+    <button class="btn" type="submit">Search</button>
+  </form>
+ 
+  
+
+
+  <button class="btn" align="center" id="sortButton">Sort Alphabetically</button>
+
+  <div id="albumsContainer" class="grid"></div>
+
+
+
+  <script>
+    const CLIENT_ID = '4034fb5829ee4eb2b2a2cfaa29336f4e';
+    const CLIENT_SECRET = 'c7768173586d4b13b957dfa84340cd1b';
+
+    const searchForm = document.getElementById('searchForm');
+    const albumsContainer = document.getElementById('albumsContainer');
+    const sortButton = document.getElementById('sortButton');
+
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const artistName = document.getElementById('artistName').value;
+      getArtistAlbums(artistName);
+    });
+
+    sortButton.addEventListener('click', function() {
+      sortAlbums();
+    });
+
+    questionButton.addEventListener('click', function() {
+      const name = prompt('Welcome! What is your name?');
+      if (name) {
+        const greeting = `Hello, ${name}!`;
+        const explanation = "This application can be used to find the albums of your favorite artists. Enjoy! ";
+        alert(`${greeting}\n\n${explanation}`);
+      }
+    });
+
+    let albums = []; // Array to store retrieved albums
+
+    function getArtistAlbums(artistName) {
+      const parameters = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
+      };
+
+      fetch('https://accounts.spotify.com/api/token', parameters)
+        .then(result => result.json())
+        .then(data => {
+          const accessToken = data.access_token;
+          const albumsEndpoint = `https://api.spotify.com/v1/search?q=${encodeURIComponent(artistName)}&type=album`;
+
+          fetch(albumsEndpoint, {
+            headers: {
+              'Authorization': 'Bearer ' + accessToken
+            }
+          })
+            .then(response => response.json())
+            .then(data => {
+              albums = data.albums.items;
+              displayAlbums(albums);
+            })
+            .catch(error => console.error(error));
+        })
+        .catch(error => console.error(error));
+    }
+
+    function displayAlbums(albums) {
+      albumsContainer.innerHTML = '';
+      
+      if (albums.length === 0) {
+        albumsContainer.textContent = 'No albums found for this artist.';
+        return;
+      }
+
+      albums.forEach(album => {
+        const albumCard = document.createElement('div');
+        albumCard.classList.add('album-card');
+
+        const albumImage = document.createElement('img');
+        albumImage.classList.add('album-image');
+        albumImage.src = album.images[0].url;
+        albumImage.alt = album.name;
+
+        const albumName = document.createElement('p');
+        albumName.textContent = album.name;
+
+        albumCard.appendChild(albumImage);
+        albumCard.appendChild(albumName);
+
+        albumsContainer.appendChild(albumCard);
+      });
+    }
+
+    function sortAlbums() {
+      albums.sort((a, b) => a.name.localeCompare(b.name));
+      displayAlbums(albums);
+    }
+  </script>
+  </body>
+</html>
