@@ -7,32 +7,15 @@ description: An account of my day
 show_images: true
 image: /images/me_claire_mort.jpg
 ---
-# Thursday, August 25th
-**Period 1 Intro to Engineering Design:**
-- :clock1: Starts @ 8:35 am
-- :pencil2: Warm Up/Notes : class discussion about brainstorming and concept sketches
-- :bulb: Main Idea : Brainstorming can be a lenghty and diffucult process. It's important to be patient and not discard any ideas you have.
-- :memo: HW : finish concept sketch and brainstorming 20 ideas for game
-**Period 2 AP Chemistry:**
-- :clock1: Starts @ 9:49 am
-- :pencil2: Warm Up/Notes : Mass Spectroscopy notes
-- :bulb: Main Idea : the four processes that occur inside a mass spectrometer are ionization, acceleration, deflection, and detection
-- :memo: HW : finish extension questions, print out and fill out lab storyboard
-**Period 3 AP Calculus AB:**
-- :clock1: Starts @ 11:13 am
-- :pencil2: Warm Up/Notes : a-g , getting more comfortable with algebraic limits
-- :bulb: Main Idea : if f(x) is continous at x=a then lim of f(x) as x approaches a = f(a)
-- :memo: HW : finish notes a-g, p 103-104 # 15, 40, 42, 49 and p 115 # 24, 26 (optional), 28, 30, 32, 37, 38, 41, 43, 54 
-*Lunch Break*
-**Period 4 APCSP:**
-- :clock1: Starts @ 12:47 pm
-- :pencil2: Warm Up/Notes : Learned about bash and worked on project due monday
-- :bulb: Main Idea : bash scripting is a way to automate tasks (collection of bash commands) that you need to execute at a specific time
-- :memo: HW : Work on bash, pyquiz, and blog/vocab md post
-**Period 5 Honors Humanities:**
-- :clock1: Starts @ 2:36 pm
-- :pencil2: Warm Up/Notes : analyze art, read tolstoy's definition of art
-- :bulb: Main Idea : The definition of art has changed throughout the centuries. Art must convey an emotion. feeling, or idea
-- :memo: HW : finish cornell notes on "Culture and Values", prepare for class discussion and presentation on POE and D
-**Field Hockey Practice:**
-:runner: Practice from 4-6 pm
+## End of yr reflection - Tanisha Patil
+### Skills you have obtained:
+Throughout the year , I have gotten many new skills in computer science. I would say I have gained proficiency in Python and learned so many new things about HTML and JS. I have been exposed to so many ideas about programming like. API’s, the SCRUM process, AGILE methodology and more. More importantly I have developed problem-solving abilities by tackling programming challenges throughout the year. I have been forced to step outside of my comfort zone at times to solve problems in ways I have never thought of before. I have learned about data structures, algorithms, software development methodologies, and database management. Overall, I have developed a strong foundation in computer science principles and programming skills, but more importantly I have developed skills in collaboration, time management, and problem solving skills. 
+### Highs and lows from the year:
+This year has been filled with highs and lows in my computer science journey. On the high side, I have experienced the satisfaction of solving complex programming problems and witnessing my code come to life. I have experienced the ‘high’ of successfully implementing algorithms to solve real-world challenges and have learned to push myself in the hacks. I have noticed that in the beginning I had aimed for the 2.7 but recently I have been really trying to go the extra mi.e.  Collaborating with peers on group projects has also been a highlight.
+However, there have also been lows. There were moments of frustration when I encountered challenges in syntax or errors that were unfamiliar to me. Sometimes, managing deadlines and balancing multiple assignments and projects became overwhelming. However, these lows have provided valuable learning experiences.
+### Future plans with CompSci:
+In the future, I plan to further deepen my knowledge in computer science. I would like to explore specialized areas such as artificial intelligence, machine learning, and data science. I aspire to work on innovative projects that leverage emerging technologies and contribute to advancements in the field. I plan to stay updated with the latest industry trends and continue expanding my skill set . While my major and career path are sort of undecided, I know that computer science will be beneficial to me in whatever I do. 
+### Future plans in Education/Career:
+In terms of education and career, I have a strong interest in pursuing a master's degree in some engineering/science/math field to expand my knowledge and gain expertise. I aim to work in a challenging  environment where I can apply my skills and contribute to cutting-edge projects. I aspire to take up leadership roles and work on research and development in technology. Also, I am open to exploring opportunities in academia, where I can share knowledge through research as that is something I have enjoyed doing so far. 
+### Other:
+As a computer science enthusiast, I have developed a passion for promoting inclusivity in the field. I believe in the power of technology to drive positive social change. In the future, I plan to actively participate in initiatives that encourage underrepresented groups to pursue computer science careers. I aim to advocate for inclusivity within the tech industry. Additionally, I plan on staying updated with the latest advancements in computer science ethics .
