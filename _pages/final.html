@@ -1,0 +1,179 @@
+---
+layout: page
+title: Film Finder
+permalink: /filmfinder/
+--- 
+<html>
+<head>
+    <div id="demo" align="center">
+        <p>Hover over me to animate!</p>
+        <p id="image" onmouseover="animateScript()"> </p>
+    </div>
+    <style>
+    
+    #image {
+      height: 154px;
+      width: 221px;
+    background: 
+    url('https://www.koolmoves.com/images_slideshow/cat-221-154-8.png') 0px 0px;
+    }
+    </style>
+    <title>📽</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #9b25a5;
+        }
+        button {
+            cursor: pointer;
+            background-color: #7f3aa1;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<div>
+    <label for="genreInput">Genre:</label>
+    <input type=text id="genreInput">
+    <button onclick="searchByGenre()">Search</button>
+</div>
+<body>
+    <h1 align="center">  🎥 Film Finder 🎥</h1>
+    <button onclick="sortTableByLikes()">Sort by Likes</button>
+    <table id="moviesTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Likes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically generated here -->
+        </tbody>
+    </table>
+
+    <script>
+        // The above style tag, styles an HTML element with the id "image". The image starting position 
+        // is (0,0) px. The dimensions are also mentioned. 
+    
+        // This is the sprite code
+        var tID; // Set variable tID 
+        function animateScript() { // define function animateScript
+        var    position = 221; // Set variable position to 221 px (I got this number by dividing the total dimension of the script by the number of frames)
+        const  interval = 100; // Interval constant at 100 milliseconds
+        tID = setInterval ( () => { // Starts an interval using setInterval(). Repeatedly executes the callback function at specified interval
+        document.getElementById("image").style.backgroundPosition = // Sets the image defined in the style tag as the 'backgroundPosition' property
+        `-${position}px 0px`; //  -(image should be to left of container) $(position)px amount of pixels to move the bg picture to the left. position is an integer defined in the js code. 0px is the vertical
+        if (position < 1105) // If the value of position is less than the total width of sprite img 
+        { position = position + 221;} // increment position by 221 to go to next frame
+        else
+        { position = 221; } // other wise reset the position to the begining frame (This allows for the running-loop effect)
+        }
+        , interval ); 
+        } 
+    </script>
+
+    <script>
+            fetch('http://localhost:5050/movies') // fetch data from the flask
+            .then(response => response.json()) // parse data in json
+            .then(data => {
+                moviesData = data; // Store movie data in the moviesData array
+
+                const tableBody = document.querySelector('#moviesTable tbody'); // select table body
+                moviesData.forEach(movie => { // populate table with json data
+                    const row = document.createElement('tr');
+                    row.id = `movieRow-${movie.id}`;
+                    row.innerHTML = `
+                        <td>${movie.name}</td>
+                        <td>${movie.genre}</td>
+                        <td class="likes">${movie.likes}</td>
+                        <td>
+                            <button onclick="updateLikes(${movie.id})">Like</button>
+                        </td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => { // error handling
+                console.error('Error:', error);
+            });
+
+    let moviesData = []; // Set moviesData to an empty array
+
+    function updateLikes(movieId) { // Function update likes with parameter movieId
+            fetch('http://localhost:5050/movies/like', { // fetching from the flask server with POST method
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: movieId // Convert movieId parameter to JSON and sending it in the request
+                })
+            })
+                .then(response => response.json()) // Parsing response as JSON
+                .then(data => {
+                    const movieRow = document.querySelector(`#movieRow-${data.id}`); // Selecting movie row element based on recieved data.id
+                    const likesCell = movieRow.querySelector('.likes'); // Updating the content of the likes cell of that id with the data.likes value
+                    likesCell.textContent = data.likes; // the text content of likesCell that was just assigned is now given the value of the updated likes count
+                    updateMoviesData(data.id, data.likes); // Update moviesData with the updated like count
+                })
+                .catch(error => { // error handling
+                    console.error('Error:', error);
+                });
+        }
+
+    function sortTableByLikes() { // function to sort the table by likes in descending order
+            moviesData.sort((a, b) => b.likes - a.likes); // Sort moviesData array by likes in descending order
+
+            const tableBody = document.querySelector('#moviesTable tbody'); // Selects table body element by iD
+            tableBody.innerHTML = ''; // Clear existing table rows
+
+            moviesData.forEach(movie => { // iteration through each item in the array 
+                const row = document.createElement('tr'); // create new row element
+                row.id = `movieRow-${movie.id}`; // filling columns with data
+                row.innerHTML =  ` 
+                    <td>${movie.name}</td>  
+                    <td>${movie.genre}</td>
+                    <td class="likes">${movie.likes}</td>
+                    <td>
+                        <button onclick="updateLikes(${movie.id})">Like</button>
+                    </td>
+                `;
+                tableBody.appendChild(row); // append rows created to table display
+            });
+        }
+    
+    
+    function searchByGenre() { // function to search through table by genre of movie
+    const genreInput = document.querySelector('#genreInput').value.toLowerCase(); // references text value of genreInput (id) and saves it to constant genreInput
+
+    const filteredMovies = moviesData.filter(movie => movie.genreInput.toLowerCase() === genreInput); // filters moviesData array to include only movies with specified genre
+
+    const tableBody = document.querySelector('#moviesTable tbody'); // selects body of table
+    tableBody.innerHTML = ''; // Clear existing table rows
+
+    filteredMovies.forEach(movie => { // iteration to create a new table row for each filtered movie, the populate it within table with all corresponding column values
+        const row = document.createElement('tr');
+        row.id = `movieRow-${movie.id}`;
+        row.innerHTML = `
+            <td>${movie.name}</td>
+            <td>${movie.genre}</td>
+            <td class="likes">${movie.likes}</td>
+            <td>
+                <button onclick="updateLikes(${movie.id})">Like</button>
+            </td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+    </script>
+</body>
+</html>
