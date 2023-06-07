@@ -5,8 +5,8 @@ permalink: /filmfinder/
 --- 
 <html>
 <head>
-    <div id="demo" align="center">
-        <p>Hover over me to animate!</p>
+    <div id="demo">
+        <p align="left">Hover over me to animate!</p>
         <p id="image" onmouseover="animateScript()"> </p>
     </div>
     <style>
@@ -20,20 +20,68 @@ permalink: /filmfinder/
     </style>
     <title>📽</title>
     <style>
+        body {
+            background-color: #ffffff;
+            color: #008000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* CSS for the animation */
+        #demo {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        #image {
+            height: 154px;
+            width: 221px;
+            background: url('https://www.koolmoves.com/images_slideshow/cat-221-154-8.png') 0px 0px;
+        }
+        
+        /* CSS for the table */
         table {
             border-collapse: collapse;
             width: 100%;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 20px;
         }
+        
         th, td {
             padding: 8px;
             text-align: left;
-            border-bottom: 1px solid #9b25a5;
+            border-bottom: 1px solid #008000;
         }
+        
+        /* CSS for the button */
         button {
             cursor: pointer;
-            background-color: #7f3aa1;
-            color: aliceblue;
+            background-color: #008000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #ffffff;
+            color: #008000;
+            border: 1px solid #008000;
+        }
+        
+        /* CSS for the input field and label */
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        label {
+            font-size: 16px;
         }
     </style>
 </head>
@@ -67,7 +115,7 @@ permalink: /filmfinder/
         // This is the sprite code
         var tID; // Set variable tID 
         function animateScript() { // define function animateScript
-        var    position = 221; // Set variable position to 221 px (I got this number by dividing the total dimension of the script by the number of frames)
+        var position = 221; // Set variable position to 221 px (I got this number by dividing the total dimension of the script by the number of frames)
         const  interval = 100; // Interval constant at 100 milliseconds
         tID = setInterval ( () => { // Starts an interval using setInterval(). Repeatedly executes the callback function at specified interval
         document.getElementById("image").style.backgroundPosition = // Sets the image defined in the style tag as the 'backgroundPosition' property
@@ -153,13 +201,10 @@ permalink: /filmfinder/
     
     
     function searchByGenre() { // function to search through table by genre of movie
-    const genreInput = document.querySelector('#genreInput').value.toLowerCase(); // references text value of genreInput (id) and saves it to constant genreInput
-
-    const filteredMovies = moviesData.filter(movie => movie.genreInput.toLowerCase() === genreInput); // filters moviesData array to include only movies with specified genre
-
-    const tableBody = document.querySelector('#moviesTable tbody'); // selects body of table
-    tableBody.innerHTML = ''; // Clear existing table rows
-
+        const genreInput = document.querySelector('#genreInput').value.toLowerCase(); // references text value of genreInput (id) and saves it to constant genreInput
+        const filteredMovies = moviesData.filter(movie => movie.genre.toLowerCase() === genreInput); // filters moviesData array to include only movies with specified genre
+        const tableBody = document.querySelector('#moviesTable tbody'); // selects body of table
+        tableBody.innerHTML = ''; // Clear existing table rows
     filteredMovies.forEach(movie => { // iteration to create a new table row for each filtered movie, the populate it within table with all corresponding column values
         const row = document.createElement('tr');
         row.id = `movieRow-${movie.id}`;
