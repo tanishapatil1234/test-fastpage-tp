@@ -95,7 +95,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -218,6 +218,131 @@ window.onload = wrap_img;
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another way to access data from a csv file is to transfer the data into a SQL table. If you are familiar with SQL, or find tables easier to work with this may be your choice but keep in mind that this requires a few more steps. Here's the code to create a table and populate it with data from a csv file. Note that you must have SQL previously installed, as well as the sqlite viewer extension on vscode ...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>BEWARE</em>: Using the SQL way, limits the use of Pandas on your data set. To see data analysis using SQL including the whole cleaning and visualiztion process go <a href="https://tanishapatil1234.github.io/test-fastpage-tp/2023/03/21/GDP_vs_CO2.html#CLEANING-DATA">here</a>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">Error</span>
+
+<span class="c1"># creating functions to make sqlite table (makes process easier if you plan to make multuple tables for different datasets)</span>
+
+<span class="k">def</span> <span class="nf">create_connection</span><span class="p">(</span><span class="n">db_file</span><span class="p">):</span>
+    <span class="sd">""" create a database connection to the SQLite database</span>
+<span class="sd">        specified by db_file</span>
+<span class="sd">    :param db_file: database file</span>
+<span class="sd">    :return: Connection object or None</span>
+<span class="sd">    """</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">conn</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">conn</span>
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">):</span>
+    <span class="sd">""" create a table from the create_table_sql statement</span>
+<span class="sd">    :param conn: Connection object</span>
+<span class="sd">    :param create_table_sql: a CREATE TABLE statement</span>
+<span class="sd">    :return:</span>
+<span class="sd">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">create_table_sql</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="s2">"instance/energy.db"</span> <span class="c1"># Path to an empty folder I made called instance. energy.db will be created when the code is run</span>
+    <span class="c1"># Here I specify the column names correlating to the data in the csv file</span>
+    <span class="n">sql_create_projects_table</span> <span class="o">=</span> <span class="s2">""" CREATE TABLE IF NOT EXISTS energy ( </span>
+<span class="s2">                                        id PRIMARY KEY,</span>
+<span class="s2">                                        country text NOT NULL,</span>
+<span class="s2">                                        e_type text NOT NULL,</span>
+<span class="s2">                                        year integer NOT NULL,</span>
+<span class="s2">                                        gdp integer NOT NULL, </span>
+<span class="s2">                                        CO2_emission</span>
+<span class="s2">                                        Population</span>
+<span class="s2">                                    ); """</span>
+
+    <span class="c1"># create a database connection</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># create tables</span>
+    <span class="k">if</span> <span class="n">conn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># create projects table</span>
+        <span class="n">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">sql_create_projects_table</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error! cannot create the database connection."</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">sq</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sq</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/energy.db'</span><span class="p">)</span>
+ 
+<span class="c1"># Create a cursor object</span>
+<span class="n">curs</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+ 
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/energy.csv'</span><span class="p">)</span>
+ 
+<span class="c1"># Write the data to a sqlite db table</span>
+<span class="n">data</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">'energy'</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   
+<span class="c1"># Run select sql query</span>
+<span class="n">curs</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM ENERGY'</span><span class="p">)</span>
+ 
+<span class="c1"># Fetch all records</span>
+<span class="c1"># as list of tuples</span>
+<span class="n">records</span> <span class="o">=</span> <span class="n">curs</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+     
+<span class="c1"># Close connection to SQLite database</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -976,6 +1101,14 @@ Bad data could be:</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Drop all rows with empty cells</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -993,6 +1126,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Drop all rows with NULL values</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1010,6 +1151,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Replace all NULL values with a new value</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1027,6 +1176,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Replace NULL values in the columns (specified by column) with a new value</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1044,6 +1201,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Convert all values in the Date column into the same date format</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1061,6 +1226,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Change data specified by row(row number) and column(column name)</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1078,6 +1251,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Iterate through the data and replace values specified by a condition</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1097,6 +1278,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Iterate through the data and delete rows specified by a condition</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1133,6 +1322,14 @@ Bad data could be:</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Deletes all rows with duplicate values</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1351,6 +1548,14 @@ Bad data could be:</p>
 <li>pie : pie plots</li>
 </ul>
 <p>There are more, research to find what visualization best represents your data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Line of best fit example</p>
 
 </div>
 </div>
